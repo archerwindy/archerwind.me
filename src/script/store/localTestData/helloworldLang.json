@@ -1,0 +1,18 @@
+{
+  "EN":{
+    "title": "GiftPack",
+    "description": "Redux React Generator",
+    "documentGroup":{
+      "text": "Documentation",
+      "link": "https://github.com/Giftpack/Redux-React-Generator/wiki/Introduction"
+    }
+  },
+  "TW":{
+    "title": "禮物包",
+    "description": "Redux React 專案快速建置",
+    "documentGroup":{
+      "text": "Documentation",
+      "link": "https://github.com/Giftpack/Redux-React-Generator/wiki/Introduction"
+    }
+  }
+}
