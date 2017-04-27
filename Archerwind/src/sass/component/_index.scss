@@ -1,0 +1,105 @@
+.container{
+  height: 99vh;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  @include display-flex;
+  @include align-items(center);
+  .hello{
+    line-height: 200%;
+    width: 30%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'helvetica';
+    font-weight: 300;
+    color: #555555;
+
+    img{
+      margin-bottom: 30px;
+    }
+    a{
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #F16E86;
+    }
+  }
+  .languageSelect{
+    @include appearance(none);
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: 'helvetica';
+    color: #F16E86;
+    font-weight: 300;
+    outline: none;
+  }
+}
+
+.navigation {
+  @include display-flex;
+  flex-flow: row wrap;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    margin-right: 30px;
+    letter-spacing: 2px;
+    color: rgb( 224, 224, 224 );
+    @include font-family-Lato( 100, 16px );
+    @include transition-duration( 0.8s );
+    @include animation( 0, 1.2s, fadeInDown );
+    &.selected {
+      @include font-family-Lato( 700, 16px );
+      color: rgb( 20, 20, 20 );
+    }
+  }
+}
+
+.indicator {
+  cursor: pointer;
+}
+
+.main-section {
+  @include display-flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    @include font-family-Lato( 100, 70px );
+  }
+  h3 {
+    @include font-family-Lato( 100, 30px );
+  }
+}
+
+// Media Query
+
+@media all and ( max-width: 320px ) {
+  .navigation {
+    margin: 10px auto 5px auto;
+  }
+}
+
+@media all and ( max-width: 760px ) {
+  .navigation {
+    margin: 40px auto 20px auto;
+  }
+}
+
+@media all and ( max-width: 1140px ) {
+  .navigation {
+    margin: 120px auto 60px auto;
+  }
+}
+
+@media all and ( max-width: 2000px ) {
+  .navigation {
+    margin: 120px auto 60px auto;
+  }
+}

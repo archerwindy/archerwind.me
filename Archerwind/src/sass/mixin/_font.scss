@@ -1,5 +1,5 @@
-@mixin font-family-Loto( $weight , $size ){
-  font-family: 'Loto', sans-serif;
+@mixin font-family-Lato( $weight , $size ){
+  font-family: 'Lato', sans-serif;
   font-weight: $weight;
   font-size: $size;
 }
@@ -15,4 +15,3 @@
   font-weight: $weight;
   font-size: $size;
 }
-

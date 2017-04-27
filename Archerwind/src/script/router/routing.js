@@ -7,7 +7,8 @@ export default ( store ) => {
   const routesGroup = routesMiddleware( store );
   return {
     childRoutes: [
-      routesGroup.index
+      routesGroup.index,
+      routesGroup.project
       // RoutesGroup.childRouteExample
     ]
   };
