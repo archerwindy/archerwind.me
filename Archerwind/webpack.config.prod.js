@@ -8,7 +8,7 @@ module.exports = {
     './src/root'
   ],
   output: {
-    path: path.join(__dirname, 'publish'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -38,8 +38,8 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
-          'style-loader', 
-          'css-loader!sass-loader?includePaths[]=' 
+          'style-loader',
+          'css-loader!sass-loader?includePaths[]='
           + path.resolve(__dirname, './node_modules/compass-mixins/lib')
         )
       },
@@ -55,13 +55,13 @@ module.exports = {
         test: /.*\.(gif|png|jpe?g|svg)$/,
         loaders: [ 'url-loader?limit=0' ]
       },
-      { 
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]" 
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
       },
-      { 
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "file-loader?limit=1024&name=fonts/[name].[ext]" 
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader?limit=1024&name=fonts/[name].[ext]"
       }
     ]
   },

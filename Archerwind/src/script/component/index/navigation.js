@@ -35,12 +35,12 @@ export default class Navigation extends Component {
   render() {
     let homeClasses = classnames({
         'naviItem' : true,
-        'selected'   : ( this.state.currentSelect === 1 )
+        'selected' : ( this.state.currentSelect === 1 )
     });
 
     let portfolioClasses = classnames({
         'naviItem' : true,
-        'selected'   : ( this.state.currentSelect === 2 )
+        'selected' : ( this.state.currentSelect === 2 )
     });
 
     let skillClasses = classnames({

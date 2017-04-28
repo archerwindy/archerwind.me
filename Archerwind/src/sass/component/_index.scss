@@ -4,7 +4,8 @@
   position: relative;
   flex-direction: column;
   @include display-flex;
-  @include align-items(center);
+  @include align-items( center );
+  @include justify-content( center );
   .hello{
     line-height: 200%;
     width: 30%;
@@ -44,18 +45,21 @@
 .navigation {
   @include display-flex;
   flex-flow: row wrap;
-
+  position: relative;
   li {
     list-style: none;
     cursor: pointer;
     margin-right: 30px;
     letter-spacing: 2px;
     color: rgb( 224, 224, 224 );
-    @include font-family-Lato( 100, 16px );
-    @include transition-duration( 0.8s );
+    @include font-family-Lato( 300, 17px );
+    @include transition-duration( 0.25s );
     @include animation( 0, 1.2s, fadeInDown );
     &.selected {
-      @include font-family-Lato( 700, 16px );
+      @include font-family-Lato( 900, 17px );
+      color: rgb( 20, 20, 20 );
+    }
+    &:hover {
       color: rgb( 20, 20, 20 );
     }
   }
@@ -67,14 +71,46 @@
 
 .main-section {
   @include display-flex;
+  @include justify-content( center );
   flex-flow: row wrap;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  height: 55vh;
   h1 {
     @include font-family-Lato( 100, 70px );
   }
   h3 {
-    @include font-family-Lato( 100, 30px );
+    letter-spacing: 5px;
+    @include font-family-Lato( 100, 25px );
+    @include animation( 0, 2.0s, flipInX );
+  }
+  svg{
+    padding-left: 20px;
+    padding-bottom: -20px;
+    @include align-items( center );
+    @include justify-content( center );
+    @include transition-duration( 0.5s );
+    .archer-logos {
+
+    }
+    .finished {
+      fill: rgba(34, 31, 32, 0.8);
+    }
+
+    &:hover {
+      @include animation( 0, 1.5s, pulse );
+    }
+  }
+
+  #arrow {
+    position: absolute;
+    margin-top: 350px;
+    padding-left: 300px;
+
+    &:hover {
+      @include animation( 0, 1.5s, flash );
+    }
   }
 }
 
@@ -82,24 +118,42 @@
 
 @media all and ( max-width: 320px ) {
   .navigation {
-    margin: 10px auto 5px auto;
+
+  }
+  .main-section {
+
   }
 }
 
 @media all and ( max-width: 760px ) {
   .navigation {
-    margin: 40px auto 20px auto;
+
+  }
+  .main-section {
+    h3 {
+      @include font-family-Lato( 100, 22px );
+      line-height: 50px;
+    }
+    svg {
+      path {
+        width: 40%;
+        height: auto;
+      }
+    }
   }
 }
 
 @media all and ( max-width: 1140px ) {
   .navigation {
-    margin: 120px auto 60px auto;
+
+  }
+  .main-section {
+
   }
 }
 
 @media all and ( max-width: 2000px ) {
   .navigation {
-    margin: 120px auto 60px auto;
+
   }
 }

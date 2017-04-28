@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="80px" viewBox="0 0 67 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>A-Char</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Desktop-Main" transform="translate(-649.000000, -416.000000)" fill="#221F20">
+            <g id="Group-4" transform="translate(649.000000, 415.000000)">
+                <g id="Page-1" style="mix-blend-mode: overlay;">
+                    <path d="M34.1258959,1.54367295 L33.0054919,1.54367295 L0.333063642,80.0690593 L1.22757979,80.0690593 C1.61836589,80.0690593 1.8984669,79.9014829 2.00915198,79.5074519 L12.5603766,54.1241593 L12.5581177,54.1218948 L13.3690553,52.1358882 L13.4029385,52.0543645 L14.0150947,50.5574998 L14.0241303,50.5597644 L32.6689189,5.6945852 C33.0619638,4.85217421 33.2855929,4.23395323 33.5656939,3.39380678 C33.8457949,4.23395323 34.069424,4.85217421 34.46021,5.6945852 L53.7623325,52.1358882 L53.7555559,52.1358882 L55.0205282,55.1681149 L55.0069749,55.1749085 L65.1222358,79.5074519 C65.2329209,79.9014829 65.4565499,80.0690593 65.7931229,80.0690593 L66.800583,80.0690593 L34.1258959,1.54367295 Z" id="A-Char"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
