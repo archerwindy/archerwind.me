@@ -31,9 +31,9 @@ var
 //   console.log('Package is in a valid state');
 // });
 
-// app.use( webpackDevConfig );
+app.use( webpackDevConfig );
 
-// app.use(require('webpack-hot-middleware')(compiler));
+app.use(require('webpack-hot-middleware')(compiler));
 app.use('/public', express.static('public'));
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
