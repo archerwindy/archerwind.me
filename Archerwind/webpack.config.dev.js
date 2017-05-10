@@ -1,34 +1,38 @@
-'use strict';
-
+var WebpackNotifierPlugin = require('webpack-notifier');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  // or devtool: 'eval' to debug issues with compiled output:
+  // or devtool: 'eval' or `cheap-module-eval-source-map` to debug issues with compiled output:
   devtool: 'eval',
-  entry: [
-    // necessary for hot reloading with IE:
-    'eventsource-polyfill',
-    // listen to code updates emitted by hot middleware:
-    'webpack-hot-middleware/client?reload=true',
-    // your code:
-    './src/root'
-  ],
+  entry: {
+    app: [
+      // necessary for hot reloading with IE:
+       'eventsource-polyfill',
+       // listen to code updates emitted by hot middleware:
+       'webpack-hot-middleware/client?reload=true',
+       // your code:
+       './src/root'
+    ],
+    vendor: ['jquery','react']
+  },
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'assets'),
     filename: 'bundle.js',
-    publicPath: '/public/',
+    publicPath: '/assets/',
   },
   plugins: [
+    new WebpackNotifierPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('css/style.css'),
+    new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('development')
       }
     }),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */'vendor', /* filename= */'vendor.js'),
+    new webpack.NoErrorsPlugin(),
   ],
   resolve: {
     modulesDirectories: ['node_modules'],
@@ -37,21 +41,26 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js[x]?$/,
-        loaders: ['babel'],
-        include: path.join(__dirname, 'src')
+        test: /\.js(x)*?$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        include: __dirname,
+        query: {
+          presets: [ 'react-hmre', 'es2015', 'stage-0', 'react' ],
+          plugins: [ 'transform-decorators-legacy' , 'transform-async-to-generator' ]
+        }
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
-          'style-loader', 
-          'css-loader!sass-loader?includePaths[]=' 
+          'style-loader',
+          'css-loader!sass-loader?includePaths[]='
           + path.resolve(__dirname, './node_modules/compass-mixins/lib')
         )
       },
       {
         test: /\.css$/,
-        loader: "style!css",
+        loader: 'style!css',
       },
       {
         test: /\.json$/,
@@ -59,23 +68,23 @@ module.exports = {
       },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
-        loaders: [
-          'url-loader?limit=0'
-          // 'file?hash=sha512&digest=hex&name=images/[hash].[ext]',
-          // 'image-webpack?{progressive:true, optimizationLevel: 10, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
-        ]
+        loaders: [ 'file?hash=sha512&digest=hex&name=[hash].[ext]' ]
       },
-      { 
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]" 
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
-      { 
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "file-loader?limit=1024&name=fonts/[name].[ext]" 
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader?limit=1024&name=fonts/[name].[ext]'
       }
     ]
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, "./src/sass/")]
+    includePaths: [path.resolve(__dirname, 'client/assets/sass')]
   },
 };

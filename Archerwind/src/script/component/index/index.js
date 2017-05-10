@@ -1,40 +1,46 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actions from '../../actions/global';
 import Navigation from './navigation';
-// import Indicator from './indicator';
 import Main from './main';
-// import logo from '../../../images/giftpack_generator.png'
+import Portfolio from './portfolio';
+import Skills from './skills';
+import Profile from './profile';
 
-@connect((state , ownProps ) => ({global:state.global}))
+import Arrow from './arrow';
+
+
 export default class Index extends Component {
   constructor(props) {
     super(props);
-    this.actions = bindActionCreators( actions , props.dispatch );
-    this._langChange = this._langChange.bind(this);
     this.state = {
-      currentLang: 'EN'
+      currentPosition: '0%',
+      currentSelect: 0
     };
   }
 
-  componentWillMount() {
-
-  }
-
-  _langChange( value ) {
-    this.actions.getTranslationPackage(value);
-  }
+  componentWillMount() {}
 
   componentDidMount(){}
   render() {
-    // JSON_LANGUAGE_PACKAGE
-    const { title , description , documentGroup } = this.props.global.toObject().JSON_LANGUAGE_PACKAGE;
     return (
       <div className="container">
-        <Navigation />
-        <Main />
+        <div className="video">
+          <video autoPlay loop>
+            <source src="/assets/Ground-Zero.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <div className={`bg-overlay ${(this.state.currentSelect === 2) ? 'skill' : '' }`}/>
+        <Navigation current={this.state.currentSelect} onClick={(value)=>{
+          this.setState( value )}} />
+        <div className="main-section-container">
+          <div className="wrapper" style={{transform: `translateY(${this.state.currentPosition})` }} >
+            <Main />
+            <Portfolio/>
+            <Skills/>
+            <Profile/>
+          </div>
+        </div>
+        <Arrow current={this.state.currentSelect}/>
       </div>
     );
   }

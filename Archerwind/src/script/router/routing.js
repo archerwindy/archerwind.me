@@ -8,7 +8,10 @@ export default ( store ) => {
   return {
     childRoutes: [
       routesGroup.index,
-      routesGroup.project
+      routesGroup.giftpacker,
+      routesGroup.giftpack,
+      routesGroup.iishare,
+      routesGroup.dailybin,
       // RoutesGroup.childRouteExample
     ]
   };

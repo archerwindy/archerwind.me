@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf publish",
     "build:webpack": "cross-env NODE_ENV=production webpack -d --progress --config webpack.config.prod.js",
-    "publish": "npm run clean & npm run build:webpack",
+    "publish": "npm run build:webpack",
     "start": "node devServer.js",
     "lint": "eslint src"
   },
@@ -73,6 +73,7 @@
     "redux-devtools": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
-    "vivus": "^0.4.0"
+    "vivus": "^0.4.0",
+    "webpack-notifier": "^1.5.0"
   }
 }

@@ -15,8 +15,7 @@ var
       addr: port ,
     },
     webpackDevConfig = webpackDevMiddleware( compiler, {
-      // noInfo: true,
-      quiet: true,
+      noInfo: true,
       publicPath: config.output.publicPath,
       stats: {
         colors: true
@@ -34,7 +33,8 @@ var
 app.use( webpackDevConfig );
 
 app.use(require('webpack-hot-middleware')(compiler));
-app.use('/public', express.static('public'));
+app.use( '/assets', express.static('assets') );
+
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
