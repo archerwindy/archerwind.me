@@ -1,52 +1,53 @@
-
 var WebpackNotifierPlugin = require('webpack-notifier');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  // or devtool: 'eval' or `cheap-module-eval-source-map` to debug issues with compiled output:
+  devtool: 'eval',
   entry: {
     app: [
-        'whatwg-fetch',
-        './client/index.js'
-      ],
+      // necessary for hot reloading with IE:
+       'eventsource-polyfill',
+       // listen to code updates emitted by hot middleware:
+       'webpack-hot-middleware/client?reload=true',
+       // your code:
+       './src/root'
+    ],
     vendor: ['jquery','react']
   },
   output: {
     path: path.join(__dirname, 'assets'),
     filename: 'bundle.js',
-    publicPath: '/assets/'
+    publicPath: './assets/',
   },
   plugins: [
     new WebpackNotifierPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('development')
       }
     }),
     new webpack.optimize.CommonsChunkPlugin(/* chunkName= */'vendor', /* filename= */'vendor.js'),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
+    new webpack.NoErrorsPlugin(),
   ],
+  resolve: {
+    modulesDirectories: ['node_modules'],
+    extensions: ['', '.js', '.jsx', 'scss' , 'css' , 'json']
+  },
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js(x)*?$/,
         loader: 'babel',
         exclude: /node_modules/,
-        include: [
-          path.join(__dirname, 'client'),
-          path.join(__dirname, 'common')
-        ],
+        include: __dirname,
         query: {
-          presets: [ 'es2015', 'stage-0', 'react' ],
-          plugins: [ 'transform-flow-strip-types' , 'transform-decorators-legacy' , 'transform-async-to-generator']
+          presets: [ 'react-hmre', 'es2015', 'stage-0', 'react' ],
+          plugins: [ 'transform-decorators-legacy' , 'transform-async-to-generator' ]
         }
       },
       {
@@ -66,11 +67,8 @@ module.exports = {
         loader: 'json-loader'
       },
       {
-        test: /.*\.(gif|png|jpe?g|svg)$/,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]', // 這行暫時有路徑上的錯誤所以先註解
-          // 'image-webpack?{progressive:true, optimizationLevel: 10, interlaced: false}' /*pngquant:{quality: "65-90", speed: 4}*/
-        ]
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loaders: [ 'file?hash=sha512&digest=hex&name=[hash].[ext]' ]
       },
       {
         test: /\.json$/,
