@@ -7,6 +7,9 @@
   @include align-items( center );
   @include justify-content( center );
   // border: 1px solid #000;
+  .hero-image {
+    @include animation( 0, 1.5s, fadeInUp );
+  }
 }
 .portfolio-wrapper{
   position: relative;
@@ -31,6 +34,7 @@
   text-align: center;
   color: #4a4a4a;
   margin: 0 0 24px;
+  @include animation( 0, 1.2s, flipInX );
 }
 .project-desc{
   position: relative;
@@ -42,6 +46,7 @@
   text-align: center;
   color: #4a4a4a;
   margin: 0 0 86px;
+  @include animation( 0, 1.8s, flipInX );
 }
 
 .project-content{
@@ -49,7 +54,6 @@
   height: auto;
   width: 100%;
   .project-intro{
-
     margin-top: 70px;
     position: relative;
     width: 100%;
@@ -69,7 +73,7 @@
   display: block;
   min-height: 350px;
   height: auto;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .project-info-content{
@@ -90,13 +94,14 @@
     color: #4a4a4a;
     margin-bottom: 29px;
   }
-  .project-info-images img{
+  .project-info-images img {
     display: block;
   }
 }
 
 
 .feature-1{
+  margin-bottom: 0px;
   .project-info-images{
     @media screen and (min-width: 1024px) {
       float: right;
@@ -104,10 +109,12 @@
     }
     position: relative;
     width: 265px;
-
+    &:hover {
+      @include animation( 0, 1.2s, swing );
+    }
     .img-desc{
       display: block;
-      margin: 20px auto 0;
+      margin: 20px auto 0 auto;
       vertical-align: top;
       font-family: Lato;
       font-size: 20px;
@@ -147,8 +154,11 @@
 .feature-3{
   .project-info-images{
     display: inline-block;
-    float: right;
+    margin-left: 60px;
     width: 603px;
+  }
+  .dailybin-3 {
+    margin-top: -60px;
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
@@ -168,7 +178,6 @@
   .project-info-images{
     display: inline-block;
     width: 604px;
-    float: left;
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
@@ -180,6 +189,38 @@
       letter-spacing: 1.7px;
       text-align: justify;
       color: #4a4a4a;
+    }
+  }
+  .iishare-4 {
+    padding-top: 90px;
+  }
+  .dailybin-4 {
+    padding-top: 60px;
+  }
+  .giftpack-4 {
+    padding-top: 40px;
+  }
+}
+
+.download-area {
+  position: relative;
+  width: 100%;
+  img {
+    @include display-flex;
+    @include align-items( left );
+    @include justify-content( left );
+    @include transition-duration( 0.25s );
+    &:first-child {
+      margin: 20px auto 80px auto;
+      &:hover {
+        @include animation( 0, 1.2s, pulse );
+      }
+    }
+    &:nth-child(2) {
+      margin: 80px auto 160px auto;
+      &:hover {
+        @include animation( 0, 1.2s, pulse );
+      }
     }
   }
 }

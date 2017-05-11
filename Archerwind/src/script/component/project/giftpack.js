@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import Navigation from '../index/navigation';
-import Project_IMG from '../../../images/giftpacker-hero-big@3x.png';
-import img_1 from '../../../images/giftpacker-icon@3x.png';
-import img_2 from '../../../images/giftpacker-design-1@3x.png';
-import img_3 from '../../../images/giftpacker-design-2@3x.png';
-import img_4 from '../../../images/giftpacker-design-3@3x.png';
+import Navigation from '../project/project-navi';
+import Project_IMG from '../../../images/giftpack-hero@2x.png';
+import img_1 from '../../../images/giftpack-icon@3x.png';
+import img_2 from '../../../images/giftpack-design-1@2x.png';
+import img_3 from '../../../images/giftpack-design-2@2x.png';
+import img_4 from '../../../images/giftpack-design-3@2x.png';
+import img_5 from '../../../images/case-study@3x.png';
+import img_6 from '../../../images/apple-store@3x.png';
 
 export default class Giftpacker extends Component {
   constructor(props) {
@@ -30,8 +32,8 @@ export default class Giftpacker extends Component {
           <Navigation current={this.state.currentSelect} onClick={(value)=>{
             this.setState( value )}} />
           <div className="project-container">
-            <div className="project-title">GIFTPACKER</div>
-            <div className="project-desc">Make delivery task simple than ever before.</div>
+            <div className="project-title">GIFTPACK</div>
+            <div className="project-desc">A special way to give, a meaningful way to receive</div>
             <img src={Project_IMG} width="100%"/>
             <div className="project-content">
               <div className="project-intro">STORY & DESIGN</div>
@@ -41,7 +43,7 @@ export default class Giftpacker extends Component {
                   <span className="img-desc">App Icon Design</span>
                 </div>
                 <div className="project-info-content">
-                  Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing. Compare to all the market delivery apps, I start a new journey to build a extremely packer friendly mobile application to optimize the delivery task flow.
+                  Long distance relationships are really painful and easy to lose each other. I want to have something that is not just on the screen. Touchable and warm. Giftpack is a cross countries and cross cities gift delivery service. No matter where in the world, you can treat a gift to the cities that Giftpack covers. The delivery guys will send the gifts directly to people’s special one. Have someone in your mind? Make a meaningful treat right now.
                 </div>
               </div>
 
@@ -50,15 +52,15 @@ export default class Giftpacker extends Component {
                   <img src={img_2} width="100%"/>
                 </div>
                 <div className="project-info-content">
-                  <div className="title">STATUS CONNECTION</div>
-                  <div>The most important thing of the delivery is to tell packers what status they are in. Task is complex with severial stages, so navigation and the buttons are a good way to design for reminding packers where they are with interactions.</div>
+                  <div className="title">PICKER DESIGN</div>
+                  <div>In recent days, the interaction to complete a task should be like no-brainer which means so easy to tap. How to make connections between gifts and people? How to make everything simple but still complicate enough to get the information I want? Those are interesting challenges.</div>
                 </div>
               </div>
 
               <div className="content-group feature-3">
                 <div className="project-info-content">
-                  <div className="title">DIRECTION IMPROVEMENT</div>
-                  <div>After tons of interview with delivery guys, 95% of them never use the direction feature in the app. They prefer all the other Map applications. So, not just copy the address, out-direct to Map apps, I can let packers contact the store directly with build-in feature. More reliable and handy structure to complete the task.</div>
+                  <div className="title">UX OF NOTIFICATION</div>
+                  <div>The experience design of notification is a very challenge part to stay tune with our users. When people treat someone a gift, their mood should like posting a facebook article. They want to keep track on it and care about the comments from the others. Notifications should not just show a message, they can have emojis, graphic and the design of timing.</div>
                 </div>
                 <div className="project-info-images">
                   <img src={img_3} width="100%"/>
@@ -67,13 +69,18 @@ export default class Giftpacker extends Component {
 
 
               <div className="content-group feature-4">
-                <div className="project-info-content">
-                  <div className="title">PACKER INTERACTION</div>
-                  <div>After tons of interview with delivery guys, 95% of them never use the direction feature in the app. They prefer all the other Map applications. So, not just copy the address, out-direct to Map apps, I can let packers contact the store directly with build-in feature. More reliable and handy structure to complete the task.</div>
+                <div className="project-info-content giftpack-4">
+                  <div className="title">EMOTION OF TREATING</div>
+                  <div>How to make user feels like they are doing a meaningful thing? Every step contains the ingredient that tells user of the importance of what they are doing. Write the word that counts. Pick the gifts with receiver’s face. Make this treat big and special.</div>
                 </div>
                 <div className="project-info-images">
-                  <img src={img_4} width="100%"/>
+                  <img src={img_4} width="90%"/>
                 </div>
+              </div>
+
+              <div className="download-area">
+                <a href="#" target="_blank"><img src={img_5} width="13%"/></a>
+                <a href="https://itunes.apple.com/us/app/giftpack/id1207605845?ls=1&mt=8" target="_blank"><img src={img_6} width="15%"/></a>
               </div>
 
             </div>

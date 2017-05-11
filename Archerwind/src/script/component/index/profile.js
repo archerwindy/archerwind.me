@@ -28,7 +28,9 @@ export default class Profile extends Component {
             Start as a backend developer since 19 then become a full-stack developer in 2 years. Fall in love with iOS, graphic, UI/UX design. A serial entrepreneur, now is CEO at Giftpack, Inc.
         </div>
 
-
+        <div className="copyright">
+          ALL RIGHTS RESERVED ARCHERWIND 2017
+        </div>
       </div>
     );
   }

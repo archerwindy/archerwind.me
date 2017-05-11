@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import Navigation from '../index/navigation';
-import Project_IMG from '../../../images/giftpacker-hero-big@3x.png';
-import img_1 from '../../../images/giftpacker-icon@3x.png';
-import img_2 from '../../../images/giftpacker-design-1@3x.png';
-import img_3 from '../../../images/giftpacker-design-2@3x.png';
-import img_4 from '../../../images/giftpacker-design-3@3x.png';
+import Navigation from '../project/project-navi';
+import Project_IMG from '../../../images/dailybin-hero@3x.png';
+import img_1 from '../../../images/dailybin-icon@3x.png';
+import img_2 from '../../../images/dailybin-design-1@3x.png';
+import img_3 from '../../../images/dailybin-design-2@3x.png';
+import img_4 from '../../../images/dailybin-design-3@3x.png';
+import img_5 from '../../../images/case-study@3x.png';
 
 export default class Dailybin extends Component {
   constructor(props) {
@@ -30,9 +31,9 @@ export default class Dailybin extends Component {
           <Navigation current={this.state.currentSelect} onClick={(value)=>{
             this.setState( value )}} />
           <div className="project-container">
-            <div className="project-title">GIFTPACKER</div>
-            <div className="project-desc">Make delivery task simple than ever before.</div>
-            <img src={Project_IMG} width="100%"/>
+            <div className="project-title">DAILYBIN</div>
+            <div className="project-desc">Every tiny step is able to give a better earth</div>
+            <img className="hero-image" src={Project_IMG} width="100%"/>
             <div className="project-content">
               <div className="project-intro">STORY & DESIGN</div>
               <div className="content-group feature-1">
@@ -41,7 +42,7 @@ export default class Dailybin extends Component {
                   <span className="img-desc">App Icon Design</span>
                 </div>
                 <div className="project-info-content">
-                  Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing. Compare to all the market delivery apps, I start a new journey to build a extremely packer friendly mobile application to optimize the delivery task flow.
+                  San Francisco, the city where I live, is an amazing city that has the highest trash conversion rate in the world. And that reminds me of the damage we give to the earth. I want to create an app can drive people’s awareness of how much they hurt the planet. The app have to be opened several times per day and teach people about the knowledge of how to protect the environment and do something more than that.
                 </div>
               </div>
 
@@ -50,30 +51,34 @@ export default class Dailybin extends Component {
                   <img src={img_2} width="100%"/>
                 </div>
                 <div className="project-info-content">
-                  <div className="title">STATUS CONNECTION</div>
-                  <div>The most important thing of the delivery is to tell packers what status they are in. Task is complex with severial stages, so navigation and the buttons are a good way to design for reminding packers where they are with interactions.</div>
+                  <div className="title">GESTURE BEHAVIOR</div>
+                  <div>Dailybin can let people record the trash they generate each day, so the experience when using the app should be really fast and gesture support. Not pinch but raise the arm with your Apple Watch or your smart phone.</div>
                 </div>
               </div>
 
               <div className="content-group feature-3">
                 <div className="project-info-content">
-                  <div className="title">DIRECTION IMPROVEMENT</div>
-                  <div>After tons of interview with delivery guys, 95% of them never use the direction feature in the app. They prefer all the other Map applications. So, not just copy the address, out-direct to Map apps, I can let packers contact the store directly with build-in feature. More reliable and handy structure to complete the task.</div>
+                  <div className="title">MARKETING PHYCOLOGY</div>
+                  <div>Our goal is to teach people about the environment and do things more than that, Like share, comment, engage or donate. Using the style of comparison to make marketing adversitements is a great challenge of branding and the user research. Green is a color of environment, but what color make people willing to donate their money? Questions like this are the center of this project.</div>
                 </div>
-                <div className="project-info-images">
+                <div className="project-info-images dailybin-3">
                   <img src={img_3} width="100%"/>
                 </div>
               </div>
 
 
               <div className="content-group feature-4">
-                <div className="project-info-content">
-                  <div className="title">PACKER INTERACTION</div>
-                  <div>After tons of interview with delivery guys, 95% of them never use the direction feature in the app. They prefer all the other Map applications. So, not just copy the address, out-direct to Map apps, I can let packers contact the store directly with build-in feature. More reliable and handy structure to complete the task.</div>
+                <div className="project-info-content dailybin-4">
+                  <div className="title">UX ON APPLE WATCH</div>
+                  <div>Apple Watch gives people a new way to interact with electronic devices. Notifications, gestures and shortcuts are the point I use in the interactive design. A new way to make everything fast, easy to use and also modern.</div>
                 </div>
                 <div className="project-info-images">
                   <img src={img_4} width="100%"/>
                 </div>
+              </div>
+
+              <div className="download-area">
+                <a href="#" target="_blank"><img src={img_5} width="13%"/></a>
               </div>
 
             </div>

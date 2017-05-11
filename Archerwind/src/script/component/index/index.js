@@ -40,7 +40,8 @@ export default class Index extends Component {
             <Profile/>
           </div>
         </div>
-        <Arrow current={this.state.currentSelect}/>
+        <Arrow current={this.state.currentSelect} onClick={(value)=>{
+          this.setState( value )}}/>
       </div>
     );
   }

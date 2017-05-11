@@ -15,18 +15,18 @@ export default class Skills extends Component {
       <div className="skills-screen">
         <div className="skills-wrapper">
           <div className="skills-section des">
-            <div className="title">Des</div>
+            <div className="title">DESIGN</div>
             <div className="content">
               <span>Sketch</span>
               <span>Photoshop</span>
               <span>Illustrator</span>
               <span>InDesign</span>
               <span>Premiere</span>
-              <span>Logic Pro X</span>
-              <span>After Effects</span>
-              <span>Affinity Designer</span>
+              <span>LogicProX</span>
+              <span>AfterEffects</span>
+              <span>AffinityDesign</span>
               <span>Audition</span>
-              <span>Affinity Photo</span>
+              <span>AffinityPhoto</span>
               <span>InVision</span>
               <span>ProtoPie</span>
               <span>Keynote</span>
@@ -38,7 +38,7 @@ export default class Skills extends Component {
             </div>
           </div>
           <div className="skills-section dev">
-            <div className="title">Dev</div>
+            <div className="title">CODING</div>
             <div className="content">
               <span>Swift</span>
               <span>ReactJS</span>

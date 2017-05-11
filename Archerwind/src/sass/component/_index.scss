@@ -56,8 +56,8 @@
 
 ul.navigation {
   position: relative;
-  margin: 0 auto 100px;
-  width: 500px;
+  margin: 0 auto 100px auto;
+  width: 600px;
   display: block;
   @include translateX(-10px) ;
   li {
@@ -129,6 +129,11 @@ ul.navigation {
       // @include animation( 0, 1.5s, pulse );
     }
   }
+}
+
+.arrow-svg {
+  cursor: pointer;
+  @include animation( 0, 2.0s, fadeInUp );
 }
 
 .portfolio-screen{
@@ -241,7 +246,7 @@ ul.navigation {
         width: 100%;
         height: 86px;
         font-family: Lato;
-        font-size: 72px;
+        font-size: 55px;
         margin-bottom: 65px;
         font-weight: 100;
         letter-spacing: 15px;
@@ -260,10 +265,10 @@ ul.navigation {
           min-width: 100px;
           text-align: left;
           display: inline-block;
-          margin: 0 30px 20px 0;
+          margin: 0 40px 20px 0;
           font-family: Lato;
-          font-size: 14px;
-          font-weight: bold;
+          font-size: 12px;
+          font-weight: 500;
           letter-spacing: 1.2px;
           color: #ffffff;
         }
@@ -277,7 +282,7 @@ ul.navigation {
   // border: 1px solid #000;
   position: relative;
   width: 412px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   min-height: 55vh;
   .profile-group{
     // border: 1px solid #000;
@@ -331,6 +336,13 @@ ul.navigation {
     letter-spacing: 1.7px;
     text-align: justify;
     color: #4a4a4a;
+  }
+  .copyright {
+    margin-top: 60px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+    text-align: center;
   }
 }
 
