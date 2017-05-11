@@ -9,6 +9,13 @@
   // border: 1px solid #000;
   .hero-image {
     @include animation( 0, 1.5s, fadeInUp );
+    @media screen and (max-width: 760px) {
+      width: 160%;
+      margin: 40px auto 0px -30%;
+    }
+  }
+  @media screen and (max-width: 760px) {
+
   }
 }
 .portfolio-wrapper{
@@ -22,6 +29,9 @@
   width: 1278px;
   min-height: 500px;
   // border: 1px solid #000;
+  @media screen and (max-width: 760px) {
+    width: 100%;
+  }
 }
 
 .project-title{
@@ -35,6 +45,10 @@
   color: #4a4a4a;
   margin: 0 0 24px;
   @include animation( 0, 1.2s, flipInX );
+  @media screen and (max-width: 760px) {
+    margin-top: 30px;
+    font-size: 40px;
+  }
 }
 .project-desc{
   position: relative;
@@ -47,12 +61,22 @@
   color: #4a4a4a;
   margin: 0 0 86px;
   @include animation( 0, 1.8s, flipInX );
+  @media screen and (max-width: 760px) {
+    width: 90%;
+    line-height: 35px;
+    margin: 0 auto;
+  }
 }
 
 .project-content{
   position: relative;
   height: auto;
   width: 100%;
+  @media screen and (max-width: 760px) {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
   .project-intro{
     margin-top: 70px;
     position: relative;
@@ -65,6 +89,13 @@
     letter-spacing: 7.6px;
     color: #4a4a4a;
     margin-bottom: 40px;
+    @media screen and (max-width: 760px) {
+      font-size: 22px;
+      letter-spacing: 5px;
+      text-align: center;
+      padding-left: 0px;
+      border: none;
+    }
   }
 }
 .content-group{
@@ -83,7 +114,7 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.75;
-  letter-spacing: 1.7px;
+  letter-spacing: 1px;
   text-align: justify;
   color: #4a4a4a;
   .title{
@@ -93,6 +124,11 @@
     letter-spacing: 7.6px;
     color: #4a4a4a;
     margin-bottom: 29px;
+    @media screen and (max-width: 760px) {
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
   }
   .project-info-images img {
     display: block;
@@ -106,6 +142,10 @@
     @media screen and (min-width: 1024px) {
       float: right;
       right: 10%;
+    }
+    @media screen and (max-width: 760px) {
+      float: none;
+      margin: 0 auto 40px auto;
     }
     position: relative;
     width: 265px;
@@ -136,6 +176,10 @@
   .project-info-images{
     display: inline-block;
     width: 583px;
+    @media screen and (max-width: 760px) {
+      margin: 40px auto 40px auto;
+      width: 100%;
+    }
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
@@ -148,6 +192,9 @@
       text-align: justify;
       color: #4a4a4a;
     }
+    @media screen and (max-width: 760px) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -156,9 +203,16 @@
     display: inline-block;
     margin-left: 60px;
     width: 603px;
+    @media screen and (max-width: 760px) {
+      margin: 40px auto -80px auto;
+      width: 100%;
+    }
   }
   .dailybin-3 {
     margin-top: -60px;
+    @media screen and (max-width: 760px) {
+      margin-top: 20px;
+    }
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
@@ -171,6 +225,9 @@
     letter-spacing: 1.7px;
     text-align: justify;
     color: #4a4a4a;
+    @media screen and (max-width: 760px) {
+      margin-top: -20px;
+    }
   }
 }
 
@@ -178,6 +235,10 @@
   .project-info-images{
     display: inline-block;
     width: 604px;
+    @media screen and (max-width: 760px) {
+      margin: 40px auto 0px auto;
+      width: 100%;
+    }
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
@@ -193,12 +254,21 @@
   }
   .iishare-4 {
     padding-top: 90px;
+    @media screen and (max-width: 760px) {
+      padding-top: 0px;
+    }
   }
   .dailybin-4 {
     padding-top: 60px;
+    @media screen and (max-width: 760px) {
+      padding-top: 0px;
+    }
   }
   .giftpack-4 {
     padding-top: 40px;
+    @media screen and (max-width: 760px) {
+      padding-top: 0px;
+    }
   }
 }
 
@@ -215,11 +285,17 @@
       &:hover {
         @include animation( 0, 1.2s, pulse );
       }
+      @media screen and (max-width: 760px) {
+        width: 50%;
+      }
     }
     &:nth-child(2) {
       margin: 80px auto 160px auto;
       &:hover {
         @include animation( 0, 1.2s, pulse );
+      }
+      @media screen and (max-width: 760px) {
+        width: 60%;
       }
     }
   }

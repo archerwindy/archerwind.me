@@ -34,9 +34,10 @@ export default class Giftpacker extends Component {
           <div className="project-container">
             <div className="project-title">GIFTPACK</div>
             <div className="project-desc">A special way to give, a meaningful way to receive</div>
-            <img src={Project_IMG} width="100%"/>
+            <img className="hero-image" src={Project_IMG} width="100%"/>
             <div className="project-content">
               <div className="project-intro">STORY & DESIGN</div>
+
               <div className="content-group feature-1">
                 <div className="project-info-images">
                   <img src={img_1} width="273"/>
@@ -47,13 +48,13 @@ export default class Giftpacker extends Component {
                 </div>
               </div>
 
-              <div className="content-group feature-2">
-                <div className="project-info-images">
-                  <img src={img_2} width="100%"/>
-                </div>
+              <div className="content-group feature-2">                
                 <div className="project-info-content">
                   <div className="title">PICKER DESIGN</div>
                   <div>In recent days, the interaction to complete a task should be like no-brainer which means so easy to tap. How to make connections between gifts and people? How to make everything simple but still complicate enough to get the information I want? Those are interesting challenges.</div>
+                </div>
+                <div className="project-info-images">
+                  <img src={img_2} width="100%"/>
                 </div>
               </div>
 

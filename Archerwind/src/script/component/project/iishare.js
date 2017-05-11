@@ -50,12 +50,12 @@ export default class Giftpacker extends Component {
 
               <div className="content-group feature-2">
                 <div className="project-wrapper">
-                  <div className="project-info-images">
-                    <img src={img_2} width="100%"/>
-                  </div>
                   <div className="project-info-content">
                     <div className="title">UX OF SEC-HAND TRADE</div>
                     <div>It’s fun to have experience to know what people care when they rent second-hand stuff from the others. Distance, likes, prices, certifications and so much more. Customize each interface and forms are very important for making this real. It’s also give me a chance to understand the field that I never touch before.</div>
+                  </div>
+                  <div className="project-info-images">
+                    <img src={img_2} width="100%"/>
                   </div>
                 </div>
               </div>

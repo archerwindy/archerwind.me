@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/global';
 import Vivus , { EASE } from 'vivus';
+import logo_img from '../../../images/sub-logo@3x.png';
 
 @connect((state , ownProps ) => ({global:state.global}))
 export default class Main extends Component {
@@ -56,6 +57,7 @@ export default class Main extends Component {
     return (
       <div className="landing-screen">
         <div >
+          <img src={logo_img} width="30%"/>
           <svg id="archer-logos">
             <g id="Desktop-Main" transform="translate(-649.000000, -415.000000)">
               <g id="Group-4" transform="translate(649.000000, 415.000000)">

@@ -47,12 +47,12 @@ export default class Dailybin extends Component {
               </div>
 
               <div className="content-group feature-2">
-                <div className="project-info-images">
-                  <img src={img_2} width="100%"/>
-                </div>
                 <div className="project-info-content">
                   <div className="title">GESTURE BEHAVIOR</div>
                   <div>Dailybin can let people record the trash they generate each day, so the experience when using the app should be really fast and gesture support. Not pinch but raise the arm with your Apple Watch or your smart phone.</div>
+                </div>
+                <div className="project-info-images">
+                  <img src={img_2} width="100%"/>
                 </div>
               </div>
 

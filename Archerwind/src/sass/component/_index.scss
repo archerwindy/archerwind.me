@@ -51,10 +51,18 @@
     background: url(../images/skill-bg.png) center no-repeat;
     background-size: cover;
   }
+  @media screen and (max-width: 760px) {
+    &.skill{
+      background: rgba( 255,255,255,0.95 );
+    }
+  }
 }
 
 
 ul.navigation {
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
   position: relative;
   margin: 0 auto 100px auto;
   width: 600px;
@@ -80,11 +88,53 @@ ul.navigation {
   }
 }
 
+.mobile-menu-wrapper {
+  @media screen and (max-width: 760px) {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  display: none;
+}
+
+ul.mobile-navigation {
+  @media screen and (max-width: 760px) {
+    display: block;
+    li {
+      display: inline-block;
+      list-style: none;
+      cursor: pointer;
+      margin-right: 30px;
+      letter-spacing: 2px;
+      color: rgb( 224, 224, 224 );
+      @include font-family-Lato( 300, 17px );
+      @include transition-duration( 0.25s );
+      @include animation( 0, 1.2s, fadeInDown );
+      &.selected {
+        @include font-family-Lato( 900, 17px );
+        color: rgb( 20, 20, 20 );
+      }
+      &:hover {
+        color: rgb( 20, 20, 20 );
+      }
+    }
+  }
+  display: none;
+}
+
 .main-section-container {
   position: relative;
   width: 1278px;
   height: 55vh;
   overflow-y: hidden;
+  @media screen and (max-width: 760px) {
+    height: 72vh;
+  }
 }
 
 .wrapper{
@@ -113,7 +163,6 @@ ul.navigation {
   }
   svg{
     width: 623px;
-    padding-left: 20px;
     padding-bottom: -20px;
     @include align-items( center );
     @include justify-content( center );
@@ -124,9 +173,28 @@ ul.navigation {
     .finished {
       fill: rgba(34, 31, 32, 0.8);
     }
-
     &:hover {
       // @include animation( 0, 1.5s, pulse );
+    }
+  }
+  img {
+    display: none;
+  }
+  @media screen and (max-width: 760px) {
+    margin-top: 40px;
+    min-height: 72vh;
+    h3 {
+      display: block;
+      width: 35%;
+      margin: 0 auto;
+      line-height: 35px;
+    }
+    svg {
+      display: none;
+    }
+    img {
+      display: block;
+      margin: -40px auto 40px auto;
     }
   }
 }
@@ -134,6 +202,9 @@ ul.navigation {
 .arrow-svg {
   cursor: pointer;
   @include animation( 0, 2.0s, fadeInUp );
+  @media screen and (max-width: 760px) {
+    margin-top: 20px;
+  }
 }
 
 .portfolio-screen{
@@ -141,6 +212,13 @@ ul.navigation {
   width: 100%;
   margin: 0 auto;
   min-height: 55vh;
+
+  @media screen and (max-width: 760px) {
+    overflow: auto;
+    width: 170%;
+    margin-top: 80px;
+    min-height: 72vh;
+  }
 
   // border: 1px solid #000;
   .project-item{
@@ -223,9 +301,17 @@ ul.navigation {
   width: 100%;
   min-height: 55vh;
   overflow: hidden;
+  @media screen and (max-width: 760px) {
+    overflow: auto;
+    width: 140%;
+    margin-top: 40px;
+    min-height: 72vh;
+    color: #4a4a4a;
+  }
   // border: 1px solid #000;
   .skills-wrapper{
     position: relative;
+
     .skills-section{
       position: relative;
       display: inline-block;
@@ -234,17 +320,30 @@ ul.navigation {
       margin: 0 100px;
       vertical-align: top;
 
+      @media screen and (max-width: 760px) {
+        margin: 0 auto;
+      }
       &.dev{
         .title{color: #fff;}
         .content span{color: #fff;}
+        @media screen and (max-width: 760px) {
+          .title{color: #4a4a4a;}
+          .content span{color: #4a4a4a;}
+          margin-top: 60px;
+          margin-bottom: -90px;
+        }
       }
       &.des{
         .title{color: #4a4a4a;}
         .content span{color: #4a4a4a;}
+        @media screen and (max-width: 760px) {
+          margin-top: 60px;
+          margin-bottom: -90px;
+        }
       }
       .title{
         width: 100%;
-        height: 86px;
+        // height: 86px;
         font-family: Lato;
         font-size: 55px;
         margin-bottom: 65px;
@@ -259,7 +358,9 @@ ul.navigation {
         width: 100%;
         padding-left: 30px;
         text-align: left;
+        @media screen and (max-width: 760px) {
 
+        }
         span{
           // border: 1px solid #000;
           min-width: 100px;
@@ -284,6 +385,12 @@ ul.navigation {
   width: 412px;
   margin: 20px auto 0 auto;
   min-height: 55vh;
+  @media screen and (max-width: 760px) {
+    width: 90vw;
+    margin-top: 40px;
+    min-height: 72vh;
+    overflow-y: hidden;
+  }
   .profile-group{
     // border: 1px solid #000;
     position: relative;
@@ -291,6 +398,9 @@ ul.navigation {
     height: auto;
     text-align: left;
     margin-bottom: 47px;
+    @media screen and (max-width: 760px) {
+      text-align: center;
+    }
     .profile-picture{
       vertical-align: top;
       display: inline-block;
@@ -303,6 +413,12 @@ ul.navigation {
         height: inherit;
       }
       // border: 1px solid #000;
+      @media screen and (max-width: 760px) {
+        padding-top: 80px;
+        width: 60%;
+        height: auto;
+        margin: 0 auto 20px auto;
+      }
     }
     .profile-into{
       vertical-align: top;
@@ -316,6 +432,9 @@ ul.navigation {
       	letter-spacing: 8.2px;
       	color: #4a4a4a;
         margin-bottom: 10px;
+        @media screen and (max-width: 760px) {
+          font-size: 28px;
+        }
       }
       .profile-mail{
         font-family: Lato;
@@ -323,6 +442,9 @@ ul.navigation {
       	font-weight: 300;
       	letter-spacing: 1.7px;
       	color: #4a4a4a;
+        @media screen and (max-width: 760px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -330,12 +452,17 @@ ul.navigation {
     position: relative;
     width: 100%;
     font-family: Lato;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.75;
     letter-spacing: 1.7px;
     text-align: justify;
     color: #4a4a4a;
+    @media screen and (max-width: 760px) {
+      font-size: 16px;
+      margin-top: -20px;
+      text-align: left;
+    }
   }
   .copyright {
     margin-top: 60px;

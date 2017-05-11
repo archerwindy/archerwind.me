@@ -21,10 +21,12 @@ export default class Arrow extends Component {
 
   _handleSelect() {
     let selectedKey = this.props.current + 1
-    this.props.onClick({
-      currentPosition: `-${selectedKey * 25}%`,
-      currentSelect: selectedKey
-    })
+    if( selectedKey !== 4 ) {
+      this.props.onClick({
+        currentPosition: `-${selectedKey * 25}%`,
+        currentSelect: selectedKey
+      })
+    }
   }
 
   componentDidMount(){
@@ -38,8 +40,8 @@ export default class Arrow extends Component {
   render() {
     const arrowClasses = `${( this.state.isArrowFinished ) ? 'finished' : '' }`;
     return (
-      <div className={`scroll ${(this.props.current === 3) ? 'fadeOutDown' : 'fadeInDown' } animated arrow-svg`} onClick={() => this._handleSelect()}>
-        <svg id="arrow">
+      <div className={`scroll ${(this.props.current === 3) ? 'fadeOutDown' : 'fadeInDown' } animated`} onClick={() => this._handleSelect()}>
+        <svg id="arrow" className="arrow-svg">
           <g id="Desktop-Wireframe">
             <g id="Desktop-Main" transform="translate(-933.000000, -838.000000)">
               <g id="icon-arrow" transform="translate(934.000000, 838.000000)">

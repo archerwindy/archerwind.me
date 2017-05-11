@@ -48,12 +48,12 @@ export default class Giftpacker extends Component {
               </div>
 
               <div className="content-group feature-2">
-                <div className="project-info-images">
-                  <img src={img_2} width="100%"/>
-                </div>
                 <div className="project-info-content">
                   <div className="title">STATUS CONNECTION</div>
                   <div>The most important thing of the delivery is to tell packers what status they are in. Task is complex with severial stages, so navigation and the buttons are a good way to design for reminding packers where they are with interactions.</div>
+                </div>
+                <div className="project-info-images">
+                  <img src={img_2} width="100%"/>
                 </div>
               </div>
 

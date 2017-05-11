@@ -38,13 +38,24 @@ export default class ProjectNavigation extends Component {
   componentDidMount(){}
   render() {
     return (
-      <ul className="navigation">
-        <li className={ `'naviItem' ${( this.props.current === 0 ) ? 'selected': '' }` } onClick={() => this._handleSelect(0)}>HOME</li>
-        <li className={ `'naviItem' ${( this.props.current === 1 ) ? 'selected': '' }` } onClick={() => this._handleSelect(1)}>GIFTPACK</li>
-        <li className={ `'naviItem' ${( this.props.current === 2 ) ? 'selected': '' }` } onClick={() => this._handleSelect(2)}>GIFTPACKER</li>
-        <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(3)}>DAILYBIN</li>
-        <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(4)}>IISHARE</li>
-      </ul>
+      <div>
+        <ul className="navigation">
+          <li className={ `'naviItem' ${( this.props.current === 0 ) ? 'selected': '' }` } onClick={() => this._handleSelect(0)}>HOME</li>
+          <li className={ `'naviItem' ${( this.props.current === 1 ) ? 'selected': '' }` } onClick={() => this._handleSelect(1)}>GIFTPACK</li>
+          <li className={ `'naviItem' ${( this.props.current === 2 ) ? 'selected': '' }` } onClick={() => this._handleSelect(2)}>GIFTPACKER</li>
+          <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(3)}>DAILYBIN</li>
+          <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(4)}>IISHARE</li>
+        </ul>
+        <div className="mobile-menu-wrapper">
+          <ul className="mobile-navigation">
+            <li className={ `'naviItem' ${( this.props.current === 0 ) ? 'selected': '' }` } onClick={() => this._handleSelect(0)}>HOME</li>
+            <li className={ `'naviItem' ${( this.props.current === 1 ) ? 'selected': '' }` } onClick={() => this._handleSelect(1)}>GIFTPACK</li>
+            <li className={ `'naviItem' ${( this.props.current === 2 ) ? 'selected': '' }` } onClick={() => this._handleSelect(2)}>GIFTPACKER</li>
+            <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(3)}>DAILYBIN</li>
+            <li className={ `'naviItem' ${( this.props.current === 3 ) ? 'selected': '' }` } onClick={() => this._handleSelect(4)}>IISHARE</li>
+          </ul>
+        </div>
+      </div>
     );
   }
 }
