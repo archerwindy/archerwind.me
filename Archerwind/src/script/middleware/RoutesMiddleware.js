@@ -36,5 +36,8 @@ export default ( _store ) => ({
     path: '/project/iishare',
     components: Iishare,
     onEnter: ()=>{console.log(_store)}
+  },
+  photography: {
+    path: '',
   }
 });

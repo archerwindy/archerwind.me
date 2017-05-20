@@ -12,6 +12,8 @@ export default ( store ) => {
       routesGroup.giftpack,
       routesGroup.iishare,
       routesGroup.dailybin,
+      routesGroup.photography,
+      routesGroup.motions
       // RoutesGroup.childRouteExample
     ]
   };
