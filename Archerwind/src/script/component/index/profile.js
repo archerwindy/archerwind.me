@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import profile from  '../../../images/profile@3x.png';
-
+import linkedin from  '../../../images/icon-linkedIn@3x.png';
+import pinterest from  '../../../images/icon-pinterest@3x.png';
 
 export default class Profile extends Component {
   constructor(props) {
@@ -20,7 +21,10 @@ export default class Profile extends Component {
           <div className="profile-into">
             <div className="profile-name">ARCHER</div>
             <div className="profile-mail">archerwindy@gmail.com</div>
-            <div className="social-icon"></div>
+            <div className="social-icon">
+              <a href="https://www.linkedin.com/in/archerwind-chiang-34252797/" target="_blank"><img src={ linkedin } width="12%" /></a>
+              <a href="https://www.pinterest.com/archerwind/" target="_blank"><img src={ pinterest } width="12%" /></a>
+            </div>
           </div>
         </div>
 

@@ -1,3 +1,7 @@
+iframe {
+  margin-bottom: -60px;
+}
+
 .portfolio-container{
   position: relative;
   width: 100%;
@@ -68,6 +72,10 @@
   }
 }
 
+.design-title {
+  margin-bottom: 120px;
+}
+
 .project-content{
   position: relative;
   height: auto;
@@ -97,6 +105,51 @@
       border: none;
     }
   }
+  .content-row {
+    flex-flow: row wrap;
+    @include display-flex;
+    @include align-items( center );
+    @include justify-content( space-between );
+    margin: 110px auto 90px auto;
+    .content-section {          
+      width: 31%;
+      h3 {
+        @include font-family-Lato( 900, 32px );
+        letter-spacing: 7.6px;
+        color: #4a4a4a;
+        border-left: 10px solid #4a4a4a;
+        padding-left: 33px;        
+      }
+      p {
+        @include font-family-Lato( 300, 18px );
+        line-height: 1.75;
+        letter-spacing: 1px;
+        text-align: justify;
+        color: #4a4a4a;
+      }
+      img {
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+  .separator {
+    margin: 90px auto 120px auto;
+  }
+  .ui-demo-section {
+    flex-flow: row wrap;
+    @include display-flex;
+    @include align-items( center );
+    @include justify-content( space-between );
+    margin: -60px auto 160px auto;
+    .ui-demo {
+      width: 22%;
+      img {
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }      
+    }
+  }
 }
 .content-group{
   position: relative;
@@ -111,9 +164,9 @@
   position: relative;
   font-family: Lato;
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 1.8;
   letter-spacing: 1px;
   text-align: justify;
   color: #4a4a4a;
@@ -157,7 +210,7 @@
       margin: 20px auto 0 auto;
       vertical-align: top;
       font-family: Lato;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
       letter-spacing: 2.1px;
       text-align: center;
@@ -185,7 +238,7 @@
     @media screen and (min-width: 1024px) {
       float: right;
       width: 611px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.75;
       letter-spacing: 1.7px;
@@ -219,7 +272,7 @@
       width: 611px;
       float: left;
     }
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.75;
     letter-spacing: 1.7px;
@@ -244,7 +297,7 @@
     @media screen and (min-width: 1024px) {
       float: right;
       width: 611px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1.75;
       letter-spacing: 1.7px;

@@ -63,6 +63,7 @@
     "react-constants": "^0.2.2",
     "react-cropper": "^0.8.0",
     "react-dom": "^0.14.8",
+    "react-key-handler": "^0.3.0",
     "react-link-state": "^0.1.2",
     "react-masonry-component": "^4.0.4",
     "react-redux": "^4.4.5",

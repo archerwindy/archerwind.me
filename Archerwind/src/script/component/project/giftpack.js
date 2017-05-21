@@ -4,11 +4,18 @@ import { connect } from 'react-redux';
 import Navigation from '../project/project-navi';
 import Project_IMG from '../../../images/giftpack-hero@2x.png';
 import img_1 from '../../../images/giftpack-icon@3x.png';
-import img_2 from '../../../images/giftpack-design-1@2x.png';
-import img_3 from '../../../images/giftpack-design-2@2x.png';
-import img_4 from '../../../images/giftpack-design-3@2x.png';
+import img_2 from '../../../images/giftpack-design-1@3x.png';
+import img_3 from '../../../images/giftpack-design-2@3x.png';
+import img_4 from '../../../images/giftpack-design-3@3x.png';
 import img_5 from '../../../images/case-study@3x.png';
 import img_6 from '../../../images/apple-store@3x.png';
+import img_7 from '../../../images/giftpack-design-4@3x.png';
+import img_8 from '../../../images/giftpack-design-5@3x.png';
+import separator from '../../../images/separator-bird@3x.png';
+import ui_1 from '../../../images/gif/giftpack-gif-1.gif';
+import ui_2 from '../../../images/giftpack-ui-2@3x.png';
+import ui_3 from '../../../images/giftpack-ui-3@3x.png';
+import ui_4 from '../../../images/giftpack-ui-4@3x.png';
 
 export default class Giftpacker extends Component {
   constructor(props) {
@@ -36,8 +43,25 @@ export default class Giftpacker extends Component {
             <div className="project-desc">A special way to give, a meaningful way to receive</div>
             <img className="hero-image" src={Project_IMG} width="100%"/>
             <div className="project-content">
-              <div className="project-intro">STORY & DESIGN</div>
+              <div className="content-row">
+                <div className="content-section">
+                  <h3>PROBLEM</h3>
+                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                </div>
+                <div className="content-section">
+                  <h3>SOLUTION</h3>
+                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                </div>
+                <div className="content-section">
+                  <h3>DIFFICULTY</h3>
+                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                </div>
+              </div>
+              <div className="separator bird">
+                <img src={ separator } width="100%" />
+              </div>              
 
+              <div className="project-intro">CONCEPT</div>
               <div className="content-group feature-1">
                 <div className="project-info-images">
                   <img src={img_1} width="273"/>
@@ -47,6 +71,40 @@ export default class Giftpacker extends Component {
                   Long distance relationships are really painful and easy to lose each other. I want to have something that is not just on the screen. Touchable and warm. Giftpack is a cross countries and cross cities gift delivery service. No matter where in the world, you can treat a gift to the cities that Giftpack covers. The delivery guys will send the gifts directly to people’s special one. Have someone in your mind? Make a meaningful treat right now.
                 </div>
               </div>
+
+              <div className="project-title">DESIGN</div>
+              <div className="project-desc design-title">Features that unique enough to be highlighted </div>             
+
+              <div className="content-group feature-3">
+                <div className="project-info-content">
+                  <div className="title">UNBOXING</div>
+                  <div>The experience design of notification is a very challenge part to stay tune with our users. When people treat someone a gift, their mood should like posting a facebook article. They want to keep track on it and care about the comments from the others. Notifications should not just show a message, they can have emojis, graphic and the design of timing.</div>
+                </div>
+                <div className="project-info-images">
+                  <img src={img_7} width="100%"/>
+                </div>
+              </div>
+
+               <div className="content-group feature-2">                
+                <div className="project-info-content">
+                  <div className="title">THERMOMETER</div>
+                  <div>In recent days, the interaction to complete a task should be like no-brainer which means so easy to tap. How to make connections between gifts and people? How to make everything simple but still complicate enough to get the information I want? Those are interesting challenges.</div>
+                </div>
+                <div className="project-info-images">
+                  <br />
+                  <img src={img_8} width="100%"/>
+                </div>
+              </div>
+
+              <div className="ui-demo-section">
+                <div className="ui-demo"><img src={ ui_1 } width="100%"/></div>
+                <div className="ui-demo"><img src={ ui_2 } width="100%"/></div>
+                <div className="ui-demo"><img src={ ui_3 } width="100%"/></div>
+                <div className="ui-demo"><img src={ ui_4 } width="100%"/></div>
+              </div>
+
+              <div className="project-title">KEY TAKEAWAY</div>
+              <div className="project-desc">Experiences and things that I learned in the project</div>
 
               <div className="content-group feature-2">                
                 <div className="project-info-content">

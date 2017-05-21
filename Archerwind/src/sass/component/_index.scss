@@ -65,7 +65,7 @@ ul.navigation {
   }
   position: relative;
   margin: 0 auto 100px auto;
-  width: 600px;
+  width: 820px;
   display: block;
   @include translateX(-10px) ;
   li {
@@ -75,7 +75,7 @@ ul.navigation {
     margin-right: 30px;
     letter-spacing: 2px;
     color: rgb( 224, 224, 224 );
-    @include font-family-Lato( 300, 17px );
+    @include font-family-Lato( 400, 17px );
     @include transition-duration( 0.25s );
     @include animation( 0, 1.2s, fadeInDown );
     &.selected {
@@ -209,7 +209,7 @@ ul.mobile-navigation {
 
 .portfolio-screen{
   position: relative;
-  width: 100%;
+  overflow: auto;
   margin: 0 auto;
   min-height: 55vh;
 
@@ -220,8 +220,13 @@ ul.mobile-navigation {
     min-height: 72vh;
   }
 
+  .project-inner-wrapper {
+    width: 1800px;
+  }
+
   // border: 1px solid #000;
   .project-item{
+    background: red;
     position: relative;
     display: inline-block;
     width: 272px;
@@ -229,7 +234,7 @@ ul.mobile-navigation {
     margin: 0 12.5px;
     background-color: #fff;
     border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.04);
     .item-images{
       cursor: pointer;
       position: relative;
@@ -248,7 +253,7 @@ ul.mobile-navigation {
         position: relative;
         width: inherit;
         height: inherit;
-        background-size: 80px;
+        background-size: 100px;
         background-position: center center;
         background-color: rgba(255,255,255 ,.85);
         background-repeat: no-repeat;
@@ -257,6 +262,8 @@ ul.mobile-navigation {
         &.giftpack{ background-image: url(../images/watch-icon-giftpack@3x.png); }
         &.daily{ background-image: url(../images/watch-icon-daily-bin@3x.png); }
         &.iishare{ background-image: url(../images/watch-icon-iishare@3x.png); }
+        &.pak{ background-image: url(../images/watch-icon-pak@3x.png); }
+        &.motion{ background-image: url(../images/watch-icon-fb-motion@3x.png); }
         &:hover{
           // background-position: center 150%;
           // background-image: none;
@@ -390,6 +397,12 @@ ul.mobile-navigation {
     margin-top: 40px;
     min-height: 72vh;
     overflow-y: hidden;
+  }
+  .social-icon {
+    img {
+      margin-top: 20px;
+      margin-right: 15px;
+    }
   }
   .profile-group{
     // border: 1px solid #000;

@@ -7,6 +7,8 @@ import Giftpacker from '../component/project/giftpacker';
 import Giftpack from '../component/project/giftpack';
 import Dailybin from '../component/project/dailybin';
 import Iishare from '../component/project/iishare';
+import Photography from '../component/project/photography';
+import Motion from '../component/project/motion';
 // 傳入的 store 可以方便在這邊做middleware的功能
 
 
@@ -38,6 +40,13 @@ export default ( _store ) => ({
     onEnter: ()=>{console.log(_store)}
   },
   photography: {
-    path: '',
+    path: '/project/photography',
+    components: Photography,
+    onEnter: ()=>{console.log(_store)}
+  },
+  motion: {
+    path: '/project/motion',
+    components: Motion,
+    onEnter: ()=>{console.log(_store)}
   }
 });

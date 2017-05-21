@@ -13,7 +13,7 @@ export default ( store ) => {
       routesGroup.iishare,
       routesGroup.dailybin,
       routesGroup.photography,
-      routesGroup.motions
+      routesGroup.motion
       // RoutesGroup.childRouteExample
     ]
   };
