@@ -50,8 +50,9 @@ iframe {
   margin: 0 0 24px;
   @include animation( 0, 1.2s, flipInX );
   @media screen and (max-width: 760px) {
+    @include font-family-Lato( 900, 32px );
     margin-top: 30px;
-    font-size: 40px;
+    line-height: 45px;
   }
 }
 .project-desc{
@@ -67,8 +68,9 @@ iframe {
   @include animation( 0, 1.8s, flipInX );
   @media screen and (max-width: 760px) {
     width: 90%;
-    line-height: 35px;
+    line-height: 32px;
     margin: 0 auto;
+    font-size: 16px;
   }
 }
 
@@ -111,14 +113,26 @@ iframe {
     @include align-items( center );
     @include justify-content( space-between );
     margin: 110px auto 90px auto;
+    @media screen and (max-width: 760px) {
+      margin-top: 20px;
+    }
     .content-section {          
       width: 31%;
+      @media screen and (max-width: 760px) { 
+        width: 100%;
+      }
       h3 {
         @include font-family-Lato( 900, 32px );
         letter-spacing: 7.6px;
         color: #4a4a4a;
         border-left: 10px solid #4a4a4a;
-        padding-left: 33px;        
+        padding-left: 33px;    
+        @media screen and (max-width: 760px) { 
+          border: none;
+          text-align: center;
+          padding-left: 0px;
+          @include font-family-Lato( 900, 22px );
+        }    
       }
       p {
         @include font-family-Lato( 300, 18px );
@@ -135,6 +149,10 @@ iframe {
   }
   .separator {
     margin: 90px auto 120px auto;
+    @media screen and (max-width: 760px) {
+      display: none;
+      margin: 0;
+    }
   }
   .ui-demo-section {
     flex-flow: row wrap;
@@ -142,8 +160,15 @@ iframe {
     @include align-items( center );
     @include justify-content( space-between );
     margin: -60px auto 160px auto;
+    @media screen and (max-width: 760px) {
+      margin-bottom: 40px;
+    }
     .ui-demo {
       width: 22%;
+      @media screen and (max-width: 760px) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
       img {
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -198,7 +223,7 @@ iframe {
     }
     @media screen and (max-width: 760px) {
       float: none;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 20px auto;
     }
     position: relative;
     width: 265px;
@@ -214,13 +239,16 @@ iframe {
       font-weight: 300;
       letter-spacing: 2.1px;
       text-align: center;
-      color: #4a4a4a;
+      color: #4a4a4a;      
     }
   }
   .project-info-content{
     @media screen and (min-width: 1024px) {
       float: left;
       width: 60%;
+    }
+    @media screen and (max-width: 760px) {
+      margin-bottom: 80px;
     }
   }
 }
