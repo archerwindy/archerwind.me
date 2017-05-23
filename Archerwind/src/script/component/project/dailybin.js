@@ -11,10 +11,12 @@ import img_5 from '../../../images/case-study@3x.png';
 import img_7 from '../../../images/dailybin-design-4@3x.png';
 import img_8 from '../../../images/dailybin-design-5@3x.png';
 import separator from '../../../images/separator-green@3x.png';
-import ui_1 from '../../../images/gif/giftpack-gif-1.gif';
-import ui_2 from '../../../images/giftpack-ui-2@3x.png';
-import ui_3 from '../../../images/giftpack-ui-3@3x.png';
-import ui_4 from '../../../images/giftpack-ui-4@3x.png';
+import ui_1 from '../../../images/gif/Dailybin-Variation.gif';
+import ui_2 from '../../../images/gif/Dailybin-Main-Gif.gif';
+import ui_3 from '../../../images/gif/Dailybin-Donate-Gif.gif';
+import ui_4 from '../../../images/gif/Dailybin-Data-Gif.gif';
+import ui_5 from '../../../images/dailybin-user-flow.png';
+import ui_6 from '../../../images/dailybin-wireframe.png';
 
 export default class Dailybin extends Component {
   constructor(props) {
@@ -46,15 +48,15 @@ export default class Dailybin extends Component {
               <div className="content-row">
                 <div className="content-section">
                   <h3>PROBLEM</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>In 21 century, environmental problems become more and more popular and lots of people are coming out serveral ways to make our earth better. I want to have some contribution to our planet as well. Find a way to drive people's awareness of how they injure the environment. Even it's simple.</p>
                 </div>
                 <div className="content-section">
                   <h3>SOLUTION</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>The answer should be very simple and easy to use to pervade everyone's life. Dailybin is an app to let people collect their gargage virtually when they throw things away. The app will show the statistic numbers and tell people how much hurt our environment. Then bring their awareness to donate.</p>
                 </div>
                 <div className="content-section">
                   <h3>DIFFICULTY</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>The biggest problem is the user experience design on the way that people throw trashes. No one would throw and open their smart phone to do such thing. So the design should be work with wearable devices and the trash can be recorded with a twist of people's arm. That was a great experience on user testing.</p>
                 </div>
               </div>
               <div className="separator bird">
@@ -78,7 +80,7 @@ export default class Dailybin extends Component {
               <div className="content-group feature-3">
                 <div className="project-info-content">
                   <div className="title">SELECTOR</div>
-                  <div>The experience design of notification is a very challenge part to stay tune with our users. When people treat someone a gift, their mood should like posting a facebook article. They want to keep track on it and care about the comments from the others. Notifications should not just show a message, they can have emojis, graphic and the design of timing.</div>
+                  <div>In order to design a selector which is easy to use and the most important, fast to interact with. I need to categorize the trashes that people usually generate each day. Create icons for them that should be easy to recognize, swipe gesture is also integrated. One more thing, the voice control with SiriKit. People can ust talk to siri to collect a kind of trash that I list in the app. Fast and easy.</div>
                 </div>
                 <div className="project-info-images">
                   <img src={img_7} width="100%"/>
@@ -88,12 +90,17 @@ export default class Dailybin extends Component {
                <div className="content-group feature-2">                
                 <div className="project-info-content">
                   <div className="title">STATISTICS</div>
-                  <div>In recent days, the interaction to complete a task should be like no-brainer which means so easy to tap. How to make connections between gifts and people? How to make everything simple but still complicate enough to get the information I want? Those are interesting challenges.</div>
+                  <div>According phycology research, people will do some kind of action when they feel guilty. So I use the graphics to show the progress of different categories. The most important feature is to use statistic numbers and translate into the damage of the earth. Like how much inch of the land you already pollute. Guilty to actions.</div>
                 </div>
                 <div className="project-info-images">
                   <br />
                   <img src={img_8} width="100%"/>
                 </div>
+              </div>
+
+              <div className="separator">
+                <img src={ ui_5 } width="100%" />
+                <img src={ ui_6 } width="100%" />
               </div>
 
               <div className="ui-demo-section">

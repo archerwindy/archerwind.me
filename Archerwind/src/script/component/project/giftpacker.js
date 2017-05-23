@@ -12,10 +12,12 @@ import img_6 from '../../../images/apple-store@3x.png';
 import img_7 from '../../../images/giftpacker-design-4@3x.png';
 import img_8 from '../../../images/giftpacker-design-5@3x.png';
 import separator from '../../../images/separator-bird@3x.png';
-import ui_1 from '../../../images/gif/giftpack-gif-1.gif';
-import ui_2 from '../../../images/giftpack-ui-2@3x.png';
-import ui_3 from '../../../images/giftpack-ui-3@3x.png';
-import ui_4 from '../../../images/giftpack-ui-4@3x.png';
+import ui_1 from '../../../images/gif/Giftpacker-Level-Gif.gif';
+import ui_2 from '../../../images/gif/Giftpacker-Route-Gif.gif';
+import ui_3 from '../../../images/gif/Giftpacker-Task-Gif.gif';
+import ui_4 from '../../../images/gif/Giftpacker-Tips-Gif.gif';
+import ui_5 from '../../../images/giftpacker-user-flow.png';
+import ui_6 from '../../../images/giftpacker-wireframe.png';
 
 export default class Giftpacker extends Component {
   constructor(props) {
@@ -47,15 +49,15 @@ export default class Giftpacker extends Component {
               <div className="content-row">
                 <div className="content-section">
                   <h3>PROBLEM</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>To support the service of Giftpack, I need an app to make our packers to deal with the tasks much easier than ever before. The process must be straight forward, the only thing that packers should care is, find our receiver of these gifts.</p>
                 </div>
                 <div className="content-section">
                   <h3>SOLUTION</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>Giftpacker not only puts the routing problem to the server side but also integrate with all the handy data of the stores, real-time traffic with schedulable working time and assignable area. Clear status display, level system to encourage the engagement and more.</p>
                 </div>
                 <div className="content-section">
                   <h3>DIFFICULTY</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>The most difficult problem is to give packers the right instruictions when something happens. Giftpack service is not like the original O2O service that someone order the service to theirselve, our customers order our service for someone else. Packer should be able to contact them and complete the task.</p>
                 </div>
               </div>
               <div className="separator bird">
@@ -77,24 +79,31 @@ export default class Giftpacker extends Component {
               <div className="project-desc design-title">Features that unique enough to be highlighted </div>             
 
               <div className="content-group feature-3">
-                <div className="project-info-content">
+                <div className="project-info-content">                  
                   <div className="title">GESTURES IN MOVE</div>
-                  <div>The experience design of notification is a very challenge part to stay tune with our users. When people treat someone a gift, their mood should like posting a facebook article. They want to keep track on it and care about the comments from the others. Notifications should not just show a message, they can have emojis, graphic and the design of timing.</div>
+                  <div>One special thing about user exoerience design is the gestures to change different states. Start with one tap which is pretty straight forward but doent't fit the real situation. After several testing, packers usually change states while moving, so they miss tapping the button all the time. The feedback was "so annoy". Then I tried the second option, swipe. Much better but when packers are on their bike or scooter, they cannot finish the swipe to change the state so are forced to stop and do it again. Finally, I change to double tap that really matches their requirements.</div>
                 </div>
                 <div className="project-info-images">
+                  <br /><br /><br /><br /><br />
                   <img src={img_7} width="100%"/>
                 </div>
-              </div>
+              </div>              
 
                <div className="content-group feature-2">                
                 <div className="project-info-content">
-                  <div className="title">LEVEL SYSTEM</div>
-                  <div>In recent days, the interaction to complete a task should be like no-brainer which means so easy to tap. How to make connections between gifts and people? How to make everything simple but still complicate enough to get the information I want? Those are interesting challenges.</div>
+                  <br /><br />
+                  <div className="title">LEVEL SYSTEM</div>                  
+                  <div>There are two main reasons to design the level system like playing games. First, the standard to count bonus for packers. Packers deserve awards when they rich some goals that makes them engage more in the process. The second one is the addiction of the game. People love to play games, what if I can integrate that kind of feeling in our delivery task? No just in the profile page, but also everything in the task. Such as if you finish the task within 40 mins, packers would acquire some achievements.</div>
                 </div>
-                <div className="project-info-images">
-                  <br />
-                  <img src={img_8} width="100%"/>
+                <div className="project-info-images">                  
+                  <br /><br />
+                  <img src={img_8} width="90%"/>
                 </div>
+              </div>
+
+              <div className="separator">
+                <img src={ ui_5 } width="100%" />
+                <img src={ ui_6 } width="100%" />
               </div>
 
               <div className="ui-demo-section">

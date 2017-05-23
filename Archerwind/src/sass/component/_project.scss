@@ -1,5 +1,10 @@
 iframe {
   margin-bottom: -60px;
+  @media screen and (max-width: 760px) {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    height: 400px;
+  }
 }
 
 .portfolio-container{
@@ -110,7 +115,7 @@ iframe {
   .content-row {
     flex-flow: row wrap;
     @include display-flex;
-    @include align-items( center );
+    @include align-items( top );
     @include justify-content( space-between );
     margin: 110px auto 90px auto;
     @media screen and (max-width: 760px) {

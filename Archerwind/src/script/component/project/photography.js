@@ -39,15 +39,15 @@ export default class Photography extends Component {
               <div className="content-row">
                 <div className="content-section">
                   <h3>INSPIRATION</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>Pak is one of my best in San Francisco, with beauty, kind and professional tech skills that most people should envy. But she didn't have enough confidence and faith on herself. So I decided to create a film that can tell her. Pak, you are a wonderful girl who deserves to shine. </p>
                 </div>
                 <div className="content-section">
                   <h3>CONCEPT</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>The most attractive element of Pak is her smile. In order to bring her confidence so I picked the epic style background music and had her talked about the reason to become a visual designer. Something that can remind herself how good she is and why in San Francisco.</p>
                 </div>
                 <div className="content-section">
                   <h3>PROCESS</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>Started with hand-sketching storyboards for three different versions then went on scheduling time with Pak and making reservation with all the stores and spots we needed. After one and half days shooting and voice recording, Adobe Premiere and Audition gave the result.</p>
                 </div>
               </div>                    
 

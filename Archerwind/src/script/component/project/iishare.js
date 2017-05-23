@@ -10,10 +10,10 @@ import img_4 from '../../../images/iishare-design-3@3x.png';
 import img_5 from '../../../images/case-study@3x.png';
 import img_7 from '../../../images/iishare-design-4@3x.png';
 import separator from '../../../images/separator@3x.png';
-import ui_1 from '../../../images/gif/giftpack-gif-1.gif';
-import ui_2 from '../../../images/giftpack-ui-2@3x.png';
-import ui_3 from '../../../images/giftpack-ui-3@3x.png';
-import ui_4 from '../../../images/giftpack-ui-4@3x.png';
+import ui_1 from '../../../images/gif/iiShare-Main-Gif.gif';
+import ui_2 from '../../../images/gif/iiShare-Offer-Gif.gif';
+import ui_3 from '../../../images/gif/iiShare-Product-Gif.gif';
+import ui_4 from '../../../images/gif/iiShare-Filter-Gif.gif';
 
 export default class Giftpacker extends Component {
   constructor(props) {
@@ -45,15 +45,15 @@ export default class Giftpacker extends Component {
               <div className="content-row">
                 <div className="content-section">
                   <h3>PROBLEM</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>Buying a new stuff is expensive and you have no insurance on most of them. People keep struggling on spending extra money on the things that they only use once or twice which is not really an enconomic way for expense.</p>
                 </div>
                 <div className="content-section">
                   <h3>SOLUTION</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>What if everyone can share their item on a platform to make extra money and paid for what they need once with insurance. I design an app which people can share their items on it with insurance. Wehn you need something, just rent it from someone who has it.</p>
                 </div>
                 <div className="content-section">
                   <h3>DIFFICULTY</h3>
-                  <p>Deliver jobs are not just sending package to others in Giftpack. Our orders are from the world with people’s true words and hearts, you wonna see a sweet smile on their face and feel warm and happy on what you are doing.</p>
+                  <p>Doing the research wasn't that hard. The most difficult thing was to understand the ecosystem of insurance. It's hard to use few dollars to add insurance on small items but still got a solution. Another on would be how to categorize all different kinds of items.</p>
                 </div>
               </div>
               <div className="separator bird">
@@ -68,7 +68,7 @@ export default class Giftpacker extends Component {
                     <span className="img-desc">App Icon Design</span>
                   </div>
                   <div className="project-info-content">
-                    New things are expensive, why not rent from someone else who doesn’t need that right now? Cheap price, extra money, make connection with more people, ensurance care and a happy community. I really cannot find a reason to say no to an app that can let people rent everything from others. This is somethig that can really change what people usually do in their daily life.
+                    New things are expensive, why not rent from someone else who doesn’t need that right now? Cheap price, extra money, make connection with more people, ensurance care and a happy community. I really cannot find a reason to say no to an app that can let people rent everything from others with insurance. This is somethig that can really change what people usually do in their daily life.
                   </div>
                 </div>
               </div>
@@ -79,9 +79,10 @@ export default class Giftpacker extends Component {
               <div className="content-group feature-3">
                 <div className="project-info-content">
                   <div className="title">SEARCH BAR</div>
-                  <div>The experience design of notification is a very challenge part to stay tune with our users. When people treat someone a gift, their mood should like posting a facebook article. They want to keep track on it and care about the comments from the others. Notifications should not just show a message, they can have emojis, graphic and the design of timing.</div>
+                  <div>Handling the problem of search from bunch of stuff was really difficult, I had to categorize them very accurate and use hash tag to help as well. Filter design is always a great thing to test how good is a deisgner. Base on the location search then move on to the category filter and finally the sorting. Sort with the price and other criteria that makes this bar can do much more than what peopl expected.</div>
                 </div>
                 <div className="project-info-images">
+                  <br /><br />
                   <img src={img_7} width="100%"/>
                 </div>
               </div>

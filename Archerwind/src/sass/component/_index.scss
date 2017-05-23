@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container{
   height: 100vh;
   text-align: center;
@@ -12,7 +16,6 @@
   // border: 1px solid #000;
 
 }
-
 
 
 .video{
@@ -210,8 +213,9 @@ ul.mobile-navigation {
 
 .portfolio-screen{
   position: relative;
-  overflow: auto;
+  overflow-y: hidden;
   margin: 0 auto;
+  // width: 100%;
   min-height: 55vh;
 
   @media screen and (max-width: 760px) {
@@ -224,6 +228,9 @@ ul.mobile-navigation {
 
   .project-inner-wrapper {
     width: 1800px;
+    min-height: 55vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 
   // border: 1px solid #000;
