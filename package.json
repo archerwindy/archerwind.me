@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "clean": "rimraf publish",
-    "build": "cross-env NODE_ENV=production webpack -d --progress --config webpack.config.prod.js",
-    "publish": "npm run build:webpack",
+    "publish": "cross-env NODE_ENV=production webpack -d --progress --config webpack.config.prod.js",
+    "build": "npm run publish",
     "start": "node devServer.js",
     "lint": "eslint src"
   },
