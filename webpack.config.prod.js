@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: './public/',
+    publicPath: './',
   },
   plugins: [
     new WebpackNotifierPlugin(),
@@ -85,6 +85,6 @@ module.exports = {
     ]
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, 'client/public/sass')]
+    includePaths: [path.resolve(__dirname, 'client/sass')]
   },
 };
