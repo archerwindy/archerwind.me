@@ -18,9 +18,9 @@ module.exports = {
     vendor: ['jquery','react']
   },
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'assets'),
     filename: 'bundle.js',
-    publicPath: '/public/',
+    publicPath: '/assets/',
   },
   plugins: [
     new WebpackNotifierPlugin(),
@@ -85,6 +85,6 @@ module.exports = {
     ]
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, 'client/public/sass')]
+    includePaths: [path.resolve(__dirname, 'client/assets/sass')]
   },
 };

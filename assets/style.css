@@ -62,7 +62,7 @@
 /* --------- base ---------- */
 body {
   font-family: 'lato';
-  background: url(./e84490170834c8236df9717b073a9c2e.jpg) center center no-repeat;
+  background: url(./assets/e84490170834c8236df9717b073a9c2e.jpg) center center no-repeat;
   background-size: cover; }
 
 /*!
@@ -2471,10 +2471,10 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(./e84490170834c8236df9717b073a9c2e.jpg) center no-repeat;
+  background: url(./assets/e84490170834c8236df9717b073a9c2e.jpg) center no-repeat;
   opacity: .95; }
   .bg-overlay.skill {
-    background: url(./f64e17727713b3d5280e2d45d0e272e0.png) center no-repeat;
+    background: url(./assets/f64e17727713b3d5280e2d45d0e272e0.png) center no-repeat;
     background-size: cover; }
   @media screen and (max-width: 760px) {
     .bg-overlay.skill {
@@ -2758,17 +2758,17 @@ ul.mobile-navigation {
         background-repeat: no-repeat;
         opacity: 1; }
         .portfolio-screen .project-item .item-images .item-images-overlay.packer {
-          background-image: url(./8627a9f0d7377bb6c452d29800807cb3.png); }
+          background-image: url(./assets/8627a9f0d7377bb6c452d29800807cb3.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay.giftpack {
-          background-image: url(./c2a0f9ab5f0f02d784ceeea6c8a6732c.png); }
+          background-image: url(./assets/c2a0f9ab5f0f02d784ceeea6c8a6732c.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay.daily {
-          background-image: url(./df9b748ebd1673b16ab39c03f2e831fa.png); }
+          background-image: url(./assets/df9b748ebd1673b16ab39c03f2e831fa.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay.iishare {
-          background-image: url(./a7db6c8673ed7786e7c8e4d98696ffba.png); }
+          background-image: url(./assets/a7db6c8673ed7786e7c8e4d98696ffba.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay.pak {
-          background-image: url(./4547547a49565fa626a750d60fef5d0c.png); }
+          background-image: url(./assets/4547547a49565fa626a750d60fef5d0c.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay.motion {
-          background-image: url(./c04c0c098c53c4695f1d805c3cde055f.png); }
+          background-image: url(./assets/c04c0c098c53c4695f1d805c3cde055f.png); }
         .portfolio-screen .project-item .item-images .item-images-overlay:hover {
           background-color: rgba(255, 255, 255, 0);
           background-size: 1000px;

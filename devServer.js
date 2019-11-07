@@ -7,7 +7,7 @@ var
     webpack = require('webpack'),
     config = require('./webpack.config.dev.js'),
     webpackDevMiddleware = require('webpack-dev-middleware'),
-    port = 3000,
+    port = 7000,
     app = express(),
     compiler = webpack(config),
     ngrokConfig = {
