@@ -55,7 +55,7 @@
     "dotenv": "^2.0.0",
     "file-loader": "^0.8.5",
     "immutable": "^3.8.1",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "masonry-layout": "^4.1.0",
     "react": "^0.14.2",
     "react-addons-css-transition-group": "^15.1.0",
